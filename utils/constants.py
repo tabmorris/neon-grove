@@ -2,8 +2,9 @@ from enum import Enum
 
 
 class PlayState(Enum):
-    START = "start"
+    TITLE = "title"
     PLAYING = "playing"
+    PAUSED = "paused"
     GAME_OVER = "game_over"
 
 

@@ -33,12 +33,22 @@ class InputHandler:
             game_state.start()
             return
 
+        if event.key in (pygame.K_p, pygame.K_PAUSE):
+            game_state.toggle_pause()
+            return
+
         if event.key == pygame.K_ESCAPE:
+            if game_state.play_state == PlayState.PAUSED:
+                game_state.toggle_pause()
+                return
+            if game_state.play_state == PlayState.PLAYING:
+                game_state.toggle_pause()
+                return
             pygame.event.post(pygame.event.Event(pygame.QUIT))
             return
 
         direction = self.direction_keys.get(event.key)
         if direction is not None:
             game_state.snake.queue_direction(direction)
-            if game_state.play_state == PlayState.START:
+            if game_state.play_state == PlayState.TITLE:
                 game_state.start()

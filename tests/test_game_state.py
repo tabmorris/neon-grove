@@ -23,6 +23,7 @@ class GameStateTest(unittest.TestCase):
 
         self.assertEqual(state.score, 1)
         self.assertEqual(state.snake.grow_pending, 1)
+        self.assertEqual(state.consume_collection_cell(), next_head)
 
     def test_wall_collision_ends_game(self) -> None:
         state = GameState()
@@ -34,6 +35,19 @@ class GameStateTest(unittest.TestCase):
         state._step()
 
         self.assertEqual(state.play_state, PlayState.GAME_OVER)
+
+    def test_pause_toggles_only_active_gameplay(self) -> None:
+        state = GameState()
+
+        state.toggle_pause()
+        self.assertEqual(state.play_state, PlayState.TITLE)
+
+        state.start()
+        state.toggle_pause()
+        self.assertEqual(state.play_state, PlayState.PAUSED)
+
+        state.toggle_pause()
+        self.assertEqual(state.play_state, PlayState.PLAYING)
 
 
 if __name__ == "__main__":

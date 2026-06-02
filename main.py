@@ -27,7 +27,7 @@ def main() -> None:
                 input_handler.handle_event(event, game_state)
 
         game_state.update(delta_seconds)
-        renderer.draw(game_state)
+        renderer.draw(game_state, delta_seconds)
 
     pygame.quit()
 

@@ -26,6 +26,7 @@ python3 -m venv .venv
 
 - Arrow keys or WASD: move
 - Space or Enter: start / restart
+- P or Escape: pause / resume during play
 - Escape: quit
 
 ## Architecture
