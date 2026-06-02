@@ -1,0 +1,20 @@
+from enum import Enum
+
+
+class PlayState(Enum):
+    START = "start"
+    PLAYING = "playing"
+    GAME_OVER = "game_over"
+
+
+DIRECTION_UP = (0, -1)
+DIRECTION_DOWN = (0, 1)
+DIRECTION_LEFT = (-1, 0)
+DIRECTION_RIGHT = (1, 0)
+
+OPPOSITE_DIRECTIONS = {
+    DIRECTION_UP: DIRECTION_DOWN,
+    DIRECTION_DOWN: DIRECTION_UP,
+    DIRECTION_LEFT: DIRECTION_RIGHT,
+    DIRECTION_RIGHT: DIRECTION_LEFT,
+}
