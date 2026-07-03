@@ -14,7 +14,6 @@ This first pass focuses on a stable, playable foundation:
 - score tracking
 - collision and game-over states
 - restart support
-- lightweight neon forest rendering
 
 ## Requirements
 
@@ -25,8 +24,10 @@ This first pass focuses on a stable, playable foundation:
 
 Clone the repository:
 
+```
 git clone git@github.com:tabmorris/neon-grove.git
 cd neon-grove
+```
 
 ## Running the Project
 
