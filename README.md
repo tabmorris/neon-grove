@@ -1,6 +1,8 @@
 # Neon Grove
 
-Neon Grove is a cozy, bioluminescent reimagining of classic Snake built with Python and Pygame.
+Neon Grove is a bioluminescent reimagining of classic Snake built with Python and Pygame.
+
+![alt text](image.png)
 
 ## Phase 1
 
@@ -14,12 +16,42 @@ This first pass focuses on a stable, playable foundation:
 - restart support
 - lightweight neon forest rendering
 
-## Run
+## Requirements
+
+- Python 3.12 or newer
+- Git
+
+## Installation
+
+Clone the repository:
+
+git clone git@github.com:tabmorris/neon-grove.git
+cd neon-grove
+
+## Running the Project
+
+### macOS/Linux
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python main.py
+```
+
+### Windows (Command Prompt)
+
+```cmd
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe main.py
+```
+
+### Windows (PowerShell)
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe main.py
 ```
 
 ## Controls
